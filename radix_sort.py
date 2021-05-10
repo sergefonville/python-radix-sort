@@ -22,8 +22,8 @@ class RadixSorter():
         self.__ns = reduce(lambda x,y: x + y, self.__buckets)
 
     def __max_digits(self):
-            highest_n = max(self.__ns)
-            digits = len(str(highest_n))
+        highest_n = max(self.__ns)
+        digits = len(str(highest_n))
         return digits
 
     def __empty_buckets(self):
