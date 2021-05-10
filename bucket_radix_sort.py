@@ -1,12 +1,12 @@
 from functools import reduce
 
-class RadixSorter():
+class BucketRadixSorter():
     def __init__(self, ns):
         self.__empty_buckets()
         self.__ns = ns
 
     def sort(self):
-        for d in range(self.__max_digits()):
+        for index in range(self.__max_digits()):
             for n in self.__ns:
                 bucket = self.__select_bucket(n, d)
                 self.__buckets[bucket].append(n)
