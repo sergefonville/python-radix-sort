@@ -8,7 +8,7 @@ class BucketRadixSorter():
     def sort(self):
         for index in range(self.__max_digits()):
             for n in self.__ns:
-                bucket = self.__select_bucket(n, d)
+                bucket = self.__select_bucket(n, index)
                 self.__buckets[bucket].append(n)
             self.__flatten()
             self.__empty_buckets()
